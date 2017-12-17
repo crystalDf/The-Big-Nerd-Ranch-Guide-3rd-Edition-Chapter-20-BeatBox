@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Button xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="soundViewModel"
+            type="com.star.beatbox.SoundViewModel"/>
+    </data>
+    <Button
         android:id="@+id/list_item_sound_button"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-    tools:text="Sound name"/>
+        android:text="@{soundViewModel.title}"
+        tools:text="Sound name"/>
+</layout>
